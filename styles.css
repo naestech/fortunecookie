@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    perspective: 1000px;
+}
+
+.fortune-cookie {
+    width: 200px;
+    height: 120px;
+    position: relative;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.cookie-half {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #e6c17a;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+    transition: transform 0.5s;
+}
+
+.left {
+    transform-origin: left center;
+    z-index: 2;
+}
+
+.right {
+    transform-origin: right center;
+    z-index: 1;
+}
+
+.fortune-paper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-size: 12px;
+    text-align: center;
+    width: 180px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 3;
+}
+
+.fortune-cookie.open .left {
+    transform: rotateY(-120deg);
+}
+
+.fortune-cookie.open .right {
+    transform: rotateY(120deg);
+}
+
+.fortune-cookie.open .fortune-paper {
+    opacity: 1;
+}
+
+#fortune-text {
+    margin: 0;
+    line-height: 1.4;
+}
