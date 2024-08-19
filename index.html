@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realistic Fortune Cookie</title>
+    <title>Fortune Cookie</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div id="fortune-cookie" class="fortune-cookie">
-            <div class="cookie-half left"></div>
-            <div class="cookie-half right"></div>
-            <div class="fortune-paper">
-                <p id="fortune-text"></p>
-            </div>
+    <button class="fc spawned" type="button">
+        <div class="fc-part left"></div>
+        <div class="fc-part right"></div>
+        <div class="fc-crumbs">
+            <div class="fc-crumb"></div>
+            <div class="fc-crumb"></div>
+            <div class="fc-crumb"></div>
+            <div class="fc-crumb"></div>
+            <div class="fc-crumb"></div>
+            <div class="fc-crumb"></div>
+            <div class="fc-crumb"></div>
+            <div class="fc-crumb"></div>
         </div>
-    </div>
+        <div class="fc-fortune">
+            <p class="fc-fortune-text">No fortune</p>
+        </div>
+    </button>
     <script src="script.js"></script>
 </body>
 </html>
